@@ -1,4 +1,3 @@
-# Power-Bi-Project
 # Project Overview:
 
 This SQL project is designed to manage and analyze data for a pizza store. The database is made up of four main tables: **order_details**, **pizzas**, **orders**, and **pizza_types**. Each table stores a specific type of information related to the store's daily operations, such as customer orders, pizza details, and menu items. Together, these tables help organize the data and make it easier to perform different types of business analysis.
