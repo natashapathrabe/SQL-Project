@@ -1,52 +1,115 @@
-# Project Overview:
+# 🍕 Pizza Sales SQL Analysis Project
 
-This SQL project is designed to manage and analyze data for a pizza store. The database is made up of four main tables: **order_details**, **pizzas**, **orders**, and **pizza_types**. Each table stores a specific type of information related to the store's daily operations, such as customer orders, pizza details, and menu items. Together, these tables help organize the data and make it easier to perform different types of business analysis.
+## 📌 Project Overview
 
-Below is a brief explanation of each table and its columns:
+This SQL project is designed to manage and analyze data for a pizza store. The database consists of four main tables:
 
-### 1. **order_details:**
+- order_details
+- pizzas
+- orders
+- pizza_types
 
-* **order_details_id:** A unique ID assigned to each record in the order details table.
-* **order_id:** Refers to the ID in the **orders** table and connects each record to a particular customer order.
-* **pizza_id:** Refers to the ID in the **pizzas** table and identifies the pizza that was ordered.
-* **quantity:** Shows how many pizzas of the selected type were ordered.
+Each table stores different information about the pizza store, making it easier to analyze sales, customer preferences, inventory, and business performance.
 
-### 2. **pizzas:**
+---
 
-* **pizza_id:** A unique ID for every pizza available in the store.
-* **pizza_type_id:** Links each pizza to the **pizza_types** table.
-* **size:** Represents the size of the pizza, such as Small, Medium, or Large.
-* **price:** The selling price of the pizza.
+## 📂 Database Schema
 
-### 3. **orders:**
+### 1. order_details
 
-* **order_id:** A unique ID for every customer order.
-* **date:** The date on which the order was placed.
-* **time:** The time when the order was placed.
+| Column | Description |
+|---------|-------------|
+| order_details_id | Unique ID for each order detail |
+| order_id | Links to the orders table |
+| pizza_id | Links to the pizzas table |
+| quantity | Number of pizzas ordered |
 
-### 4. **pizza_types:**
+### 2. pizzas
 
-* **pizza_type_id:** A unique ID for each pizza type.
-* **name:** The name of the pizza, such as Margherita or Pepperoni.
-* **category:** The category of the pizza, for example, Vegetarian or Non-Vegetarian.
-* **ingredients:** A list of ingredients used to prepare the pizza.
+| Column | Description |
+|---------|-------------|
+| pizza_id | Unique ID for each pizza |
+| pizza_type_id | Links to the pizza_types table |
+| size | Pizza size (Small, Medium, Large) |
+| price | Selling price |
 
-# Relevance to a Pizza Sales Store Manager:
+### 3. orders
 
-This SQL project helps a pizza sales store manager understand the store's performance by analyzing different types of business data. Using SQL queries, managers can gain useful insights that support better decision-making and improve the overall efficiency of the store.
+| Column | Description |
+|---------|-------------|
+| order_id | Unique order ID |
+| date | Order date |
+| time | Order time |
 
-* **Sales Analysis:** By analyzing data from the **order_details** and **pizzas** tables, managers can identify the best-selling pizzas, compare sales across different pizza sizes, and calculate the revenue generated from each product.
+### 4. pizza_types
 
-* **Inventory Management:** The **pizza_types** table provides details about pizza ingredients, helping managers plan inventory more effectively. This ensures that popular ingredients are always available while reducing unnecessary stock and waste.
+| Column | Description |
+|---------|-------------|
+| pizza_type_id | Unique pizza type ID |
+| name | Pizza name |
+| category | Pizza category |
+| ingredients | Ingredients used |
 
-* **Customer Preferences:** Information from the **orders** and **pizzas** tables allows managers to understand customer buying patterns. This helps in updating the menu, introducing new pizzas, or promoting customer favorites.
+---
 
-* **Operational Efficiency:** The **date** and **time** columns in the **orders** table help identify peak business hours. Managers can use this information to schedule employees efficiently and provide faster customer service during busy periods.
+# 📊 Business Use Cases
 
-* **Marketing Insights:** The database can also support marketing decisions by identifying popular pizzas and low-sales days. Managers can create special offers, discounts, or promotional campaigns to increase sales and attract more customers.
+### Sales Analysis
+- Identify best-selling pizzas
+- Calculate revenue
+- Compare pizza sizes
+- Analyze sales trends
 
-# Conclusion:
+### Inventory Management
+- Track ingredient demand
+- Reduce food waste
+- Improve stock planning
 
-This SQL project is more than just a database for storing information. It is a valuable business analysis tool that helps managers understand sales trends, customer preferences, inventory requirements, and daily operations. By using SQL queries to analyze the stored data, managers can make informed business decisions that improve customer satisfaction and increase profitability.
+### Customer Preference Analysis
+- Find popular pizzas
+- Understand customer ordering patterns
+- Support menu improvements
 
-Overall, this project demonstrates how SQL can be used to solve real-world business problems. It serves as a practical example for students, aspiring data analysts, and business owners who want to learn how data can support smarter business decisions.
+### Operational Efficiency
+- Identify peak ordering hours
+- Improve staff scheduling
+- Reduce customer waiting time
+
+### Marketing Insights
+- Discover low-sales days
+- Plan promotional offers
+- Increase customer engagement
+
+---
+
+# 🛠 Tools Used
+
+- SQL
+- MySQL
+- Joins
+- Aggregate Functions
+- GROUP BY
+- ORDER BY
+- Subqueries
+- Common Table Expressions (CTEs)
+
+---
+
+# 📈 Key SQL Analysis Performed
+
+- Total Orders
+- Total Revenue
+- Best Selling Pizza
+- Most Ordered Pizza Category
+- Revenue by Pizza Size
+- Daily Order Trend
+- Hourly Sales Analysis
+- Top 5 Pizzas by Revenue
+- Category-wise Sales
+- Average Pizzas Ordered per Day
+
+---
+
+# 🎯 Conclusion
+
+This SQL project demonstrates how relational databases can be used to solve real business problems. By analyzing sales, customer behavior, and operational data, store managers can make informed decisions that improve profitability and customer satisfaction.
